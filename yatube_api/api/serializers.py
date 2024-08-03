@@ -46,8 +46,9 @@ class FollowSerializer(serializers.ModelSerializer):
     following = serializers.SlugRelatedField(queryset=User.objects.all(),
                                              slug_field='username')
 
-    class Meta(BaseSerializer.Meta):
+    class Meta:
         model = Follow
+        fields = ('user', 'following')
 
     def validate_following(self, value):
         user = self.context['request'].user

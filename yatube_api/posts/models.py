@@ -98,3 +98,6 @@ class Follow(models.Model):
         on_delete=models.CASCADE,
         verbose_name='На кого подписан'
     )
+
+    def __str__(self):
+        return f'Подписка {self.user} на {self.following}'
