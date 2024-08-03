@@ -1,0 +1,1 @@
+STR_VIEW_LENGTH = 20
